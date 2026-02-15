@@ -47,13 +47,5 @@ Open the URL shown in the console (usually `https://localhost:5001` or similar).
 - `Views/Account/UserManagement.cshtml` — lists users.
 - `Migrations/20260215123508_InitialCreate.Designer.cs` — migration snapshot showing Identity tables and `City` column.
 
-## Notes for the teacher
-- The migration snapshot includes the `City` column on `AspNetUsers` and `Produits` uses `decimal(18,2)` in the migration. I added seeding for sample products in `Program.cs` so the site shows example items on first run.
-- I resolved the registration POST issue by ensuring tag helpers and an antiforgery token are present, and updated DI mismatches where the view was requesting `IdentityUser` instead of `ApplicationUser`.
-- There are nullable-reference warnings in `Register.cshtml.cs` and `ApplicationUser` due to non-nullable properties; these do not prevent the app from running but can be fixed by marking some properties nullable or using `required`/initializers.
-
-## Known minor issues and improvements
-- Nullable warnings: consider adding `?` or `required` to properties in `Register.cshtml.cs` and `ApplicationUser`.
-- I recommend adding role-based authorization for the `UserManagement` page and seeding an admin user for better access control.
-
-If you want, I can: add the nullable fixes, configure product price precision directly in the model, or initialize a Git repository and push this project to GitHub.
+## Notes
+ I added seeding for sample products in `Program.cs` so the site shows example items on first run.
