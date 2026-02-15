@@ -1,0 +1,17 @@
+@model IEnumerable<PanierParUser>
+@{
+    ViewData["Title"] = "Panier Par User";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Mes Produits</h1>
+@foreach (var item in Model)
+{
+    <div>
+        <h4>Panier ID: @item.Id</h4>
+        @foreach (var produit in item.Produits)
+        {
+            <p>@produit.Name - @produit.Price€</p>
+        }
+    </div>
+}

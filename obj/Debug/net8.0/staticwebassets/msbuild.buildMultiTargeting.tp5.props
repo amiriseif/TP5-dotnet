@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\tp5.props" />
+</Project>
