@@ -7,7 +7,6 @@ This repository contains my TP5 implementation. I implemented ASP.NET Core Ident
 ## What I did (summary)
 - Wired Identity to EF Core using `ApplicationUser` and `ApplicationDbContext` in `Program.cs`.
 - Extended the registration page to collect `City` and create users with that data.
-- Fixed UI accessibility/usability: added explicit labels/placeholders on the register form and ensured antiforgery tokens and tag helpers are present.
 - Updated `_LoginPartial` and controller injections to use `ApplicationUser` so DI resolves `UserManager<ApplicationUser>` / `SignInManager<ApplicationUser>`.
 - Implemented `Produit` and `PanierParUser` models and seeded sample products on startup.
 - Added a `UserManagement` page (controller action + view) that lists registered users (Email and City).
